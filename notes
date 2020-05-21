@@ -1,0 +1,55 @@
+AXIOS:
+- when using axios.get(url) we will get a promise back which returns a response object. we are then looking for the
+response data. which are are able to get through the .data property of the response object
+- be default axios protext against cross-site request forgery
+-it is common to make an apu request with the componentDidMount() lifecycle hook.
+
+
+ASYNC AWAIT:
+-when you put async infront of a function, you turn it into a async function. an async function is a function that knows
+how to expect the possibility of the await keyword being used to invoke async code.
+
+- os basically when you put async infron of a function, you are creating a async function and that function is going to
+expect the keyword await to be used.
+- an async function will return a promise. to consume a promise you have to use a .then()
+- so when a function has async before it, it means that the function returns a promise rather than directly returning
+a value.
+- the real advantage of use an async function is that it lets you use the await keyword, the await operator is used to
+wait for Promise. it can only be used inside an async function.
+- await only works inside of async functions and can be put infront of any promise based function to pause the code on that
+line until the promise fulfills, then returns the resulting value. in our app the promise based funciton is the axios call
+
+- so basically we create an async function, this means that it will be allowed to use the await keyword and that it now
+returns a promise instead of a value. then inside of the async function we can call use the await keyword to pause the
+call of the async function on that line until the promise is resolved. so when we use async and await, we don't have to
+use then() blocks
+
+
+
+STATE:
+-when we call setState(), React merges the objec that we provide into the current state.
+- when we call setState() this tells react that the component and the child components need to be re-rendered with
+updated state. This is the primary method that we will use to update the user interface in response to event handlers
+and server response.
+
+
+REACT LISTS
+- with lists in react, we use the map funciton a lot. the map method creates a new array populated with the results of
+calling a provided function on every element int he calling array
+- so the map funcitons creates a new array based on the function that you provided it. the function will be called for
+every element on the array.
+- in react you do the same thing, you call map on a iterable and then we can return a jsx element and store that array in
+a varible and have it displayed in the dom
+- inorder to keep the React lists clean, we should extract them to standalone component that only care about their
+concerns.
+- if you don't know if the incoming list is null or undefined, default to an empty list
+
+-so basically you call map on an array and have it a jsx element on how you want it to look, then assign it to a varible
+we then have that varible rendered inside of a component and that will give us our desired list
+
+REACT KEYS:
+- keys help identify whihc items have changed, are added or are removed. Keys should be given to the elements inside
+the array to give the elements a stable identity.
+- the best thing for a key is to use a unique key that you usually get from the API that you are requesting from
+- a index as a key may be used as a list resort but this isnt recommended because of the negative performace and
+may cause issues with component state  

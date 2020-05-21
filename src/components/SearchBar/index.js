@@ -12,12 +12,12 @@ class SearchBar extends React.Component{
 
   handleChange(event){
     this.setState({value:event.target.value})
-    console.log(this.state.value)
   }
 
   handleSubmit(event){
     event.preventDefault();
-    console.log(this.state.value)
+    this.props.onSubmit(this.state.value)
+
   }
 
   render(){
